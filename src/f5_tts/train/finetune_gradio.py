@@ -417,15 +417,15 @@ def start_training(
 
     # Command to run the training script with the specified arguments
 
-    if tokenizer_file == "":
-        if dataset_name.endswith("_pinyin"):
-            tokenizer_type = "pinyin"
-        elif dataset_name.endswith("_char"):
-            tokenizer_type = "char"
-    else:
-        tokenizer_type = "custom"
-
+  if tokenizer_file == "":
+    if dataset_name.endswith("_pinyin"):
+        tokenizer_type = "pinyin"
+    elif dataset_name.endswith("_char"):
+        tokenizer_type = "char"
+    # Eliminar los sufijos solo si no se usa un tokenizador personalizado
     dataset_name = dataset_name.replace("_pinyin", "").replace("_char", "")
+else:
+    tokenizer_type = "custom"
 
     if mixed_precision != "none":
         fp16 = f"--mixed_precision={mixed_precision}"
