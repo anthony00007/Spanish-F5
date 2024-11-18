@@ -425,7 +425,7 @@ def start_training(
     else:
         tokenizer_type = "custom"
 
-    dataset_name = dataset_name.replace("_pinyin", "").replace("_char", "")
+    dataset_name = dataset_name.replace("_pinyin", "").replace("_char", "").replace("_custom", "")
 
     if mixed_precision != "none":
         fp16 = f"--mixed_precision={mixed_precision}"
