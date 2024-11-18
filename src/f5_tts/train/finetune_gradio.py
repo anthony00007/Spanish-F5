@@ -120,7 +120,7 @@ def load_settings(project_name):
             "last_per_steps": 100,
             "finetune": True,
             "file_checkpoint_train": "",
-            "tokenizer_type": "pinyin",
+            "tokenizer_type": "custom",
             "tokenizer_file": "",
             "mixed_precision": "none",
             "logger": "wandb",
