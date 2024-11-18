@@ -15,7 +15,7 @@ win_length = 1024
 n_fft = 1024
 mel_spec_type = "vocos"  # 'vocos' or 'bigvgan'
 
-tokenizer = "pinyin"  # 'pinyin', 'char', or 'custom'
+tokenizer = ""  # 'pinyin', 'char', or 'custom'
 tokenizer_path = None  # if tokenizer = 'custom', define the path to the tokenizer you want to use (should be vocab.txt)
 dataset_name = "Emilia_ZH_EN"
 
