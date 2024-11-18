@@ -47,7 +47,7 @@ def parse_args():
     parser.add_argument("--finetune", type=bool, default=True, help="Use Finetune")
     parser.add_argument("--file_checkpoint_train", type=str, default=None, help="the path to the checkpoint")
     parser.add_argument(
-        "--tokenizer", type=str, default="", choices=["pinyin", "char", "custom"], help="Tokenizer type"
+        "--tokenizer", type=str, default="custom", choices=["pinyin", "char", "custom"], help="Tokenizer type"
     )
     parser.add_argument(
         "--tokenizer_path",
