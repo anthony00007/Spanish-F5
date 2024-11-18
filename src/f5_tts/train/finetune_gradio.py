@@ -418,8 +418,8 @@ def start_training(
     # Command to run the training script with the specified arguments
 
     if tokenizer_file == "":
-        if dataset_name.endswith("_pinyin"):
-            tokenizer_type = "pinyin"
+        if dataset_name.endswith("_custom"):
+            tokenizer_type = "custom"
         elif dataset_name.endswith("_char"):
             tokenizer_type = "char"
     else:
