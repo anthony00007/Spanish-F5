@@ -120,7 +120,7 @@ def load_settings(project_name):
             "last_per_steps": 100,
             "finetune": True,
             "file_checkpoint_train": "",
-            "tokenizer_type": "custom",
+            "tokenizer_type": "pinyin",
             "tokenizer_file": "",
             "mixed_precision": "none",
             "logger": "wandb",
@@ -1387,7 +1387,7 @@ For tutorial and updates check here (https://github.com/SWivid/F5-TTS/discussion
 
     with gr.Row():
         projects, projects_selelect = get_list_projects()
-        tokenizer_type = gr.Radio(label="Tokenizer Type", choices=["pinyin", "char", "custom"])
+        tokenizer_type = gr.Radio(label="Tokenizer Type", choices=["pinyin", "char", "custom"], value="pinyin")
         project_name = gr.Textbox(label="Project Name", value="my_speak")
         bt_create = gr.Button("Create a New Project")
 
