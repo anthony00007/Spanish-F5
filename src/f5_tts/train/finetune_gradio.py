@@ -641,7 +641,7 @@ def create_data_project(name, tokenizer_type):
     return gr.update(choices=project_list, value=name)
 
 
-def transcribe(file_audio, language="spanish"):
+def transcribe(file_audio, language="english"):
     global pipe
 
     if pipe is None:
