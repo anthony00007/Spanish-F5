@@ -101,7 +101,7 @@ def save_settings(
 
 # Load settings from a JSON file
 def load_settings(project_name):
-    project_name = project_name.replace("_pinyin", "").replace("_char", "")
+    project_name = project_name.replace("_pinyin", "").replace("_char", "").replace("_custom", "")
     path_project = os.path.join(path_project_ckpts, project_name)
     file_setting = os.path.join(path_project, "setting.json")
 
